@@ -16,7 +16,7 @@ This is a simple Sudoku puzzle generator and solver built with HTML, CSS, and Ja
 
 ## Live Demo
 
-You can view the live version of this project hosted on GitHub Pages:
+You can view the live version of this project hosted on GitHub Pages: https://aleenayousuf913.github.io/sudoku-generator/
 
 ## Development
 
