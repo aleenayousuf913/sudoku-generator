@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  width: 360px;
+  margin: 20px auto;
+  border: 3px solid black; /* outer border */
+  box-sizing: border-box;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  box-sizing: border-box;
+  background-color: white;
+  user-select: none;
+  border: 1px solid #999 !important; /* thin default border forced */
+}
+
+/* Thick right border after columns 3, 6, and 9 */
+#sudoku-grid > .cell:nth-child(9n + 3),
+#sudoku-grid > .cell:nth-child(9n + 6),
+#sudoku-grid > .cell:nth-child(9n) {
+  border-right: 3px solid black !important;
+}
+
+/* Thick bottom border after rows 3, 6, and 9 */
+#sudoku-grid > .cell:nth-child(n + 19):nth-child(-n + 27),
+#sudoku-grid > .cell:nth-child(n + 46):nth-child(-n + 54),
+#sudoku-grid > .cell:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom: 3px solid black !important;
+}
+
+/* Thick border on top edge (row 1) */
+#sudoku-grid > .cell:nth-child(-n + 9) {
+  border-top: 3px solid black !important;
+}
+
+/* Thick border on left edge (column 1) */
+#sudoku-grid > .cell:nth-child(9n + 1) {
+  border-left: 3px solid black !important;
+}
+
+/* Style input fields inside cells */
+.cell input {
+  width: 38px;
+  height: 38px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cell input:focus {
+  outline: 2px solid blue;
+}
+
+.buttons {
+  margin: 10px auto;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#result-message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  height: 24px; /* keep space even when empty */
+}
