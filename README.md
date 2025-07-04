@@ -18,3 +18,14 @@ This is a simple Sudoku puzzle generator and solver built with HTML, CSS, and Ja
 
 You can view the live version of this project hosted on GitHub Pages:
 
+## Development
+
+- `index.html` — The main HTML file containing the page structure.
+- `style.css` — The CSS file that styles the Sudoku grid and page.
+- `script.js` — The JavaScript file handling puzzle generation and user interactions.
+
+## License
+
+This project is open source and free to use.
+
+Created by Aleena Yousuf
